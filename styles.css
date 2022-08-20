@@ -356,7 +356,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   background-image: url(./img/banner/b-17.jpg);
-  min-width: 47.5%;
+  min-width: 48.25%;
   height: 50vh;
   background-size: cover;
   background-position: center;
@@ -391,4 +391,45 @@ body {
   background: #cce7d0;
   border: 1px solid #cce7d0;
   color: #000;
+}
+
+#banner3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 80px;
+}
+
+#banner3 .banner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(./img/banner/b7.jpg);
+  min-width: 31%;
+  margin-bottom: 20px;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+#banner3 .banner-box h2 {
+  color: white;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+#banner3 .banner-box h3 {
+  color: #000;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+#banner3 .banner-box2 {
+  background-image: url(./img/banner/b4.jpg);
+}
+
+#banner3 .banner-box3 {
+  background-image: url(./img/banner/b18.jpg);
 }
