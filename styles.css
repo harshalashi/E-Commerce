@@ -716,3 +716,17 @@ footer .copyright {
     width: 100%;
   }
 }
+
+@media (max-width: 365px) {
+  #hero {
+    /* padding: 0 20px; */
+    background-position: top 30% right 40%;
+  }
+  #hero button {
+    /* margin-top: 25px; */
+    padding: 14px 50px 14px 50px;
+  }
+  #feature {
+    justify-content: center;
+  }
+}
