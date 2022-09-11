@@ -72,6 +72,7 @@ let products = [
 for (let i = 0; i < carts.length; i++) {
   carts[i].addEventListener("click", () => {
     cartNumbers(products[i]);
+    totalCost(products[i]);
   });
 }
 
@@ -119,4 +120,56 @@ function setItems(product) {
   localStorage.setItem("productsInCart", JSON.stringify(cartItems));
 }
 
+function totalCost(product) {
+  let cartCost = localStorage.getItem("totalCost");
+  console.log("My cartCost is", cartCost);
+  console.log(typeof cartCost);
+
+  if (cartCost != null) {
+    cartCost = parseInt(cartCost);
+    localStorage.setItem("totalCost", cartCost + product.price);
+  } else {
+    localStorage.setItem("totalCost", product.price);
+  }
+}
+
+function displayCart() {
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+  let productContainer = document.querySelector(".products");
+  if (cartItems && productContainer) {
+    productContainer.innerHTML = "";
+    Object.values(cartItems).map((item) => {
+      productContainer.innerHTML += `
+      <div class="product">
+        <i class="fas fa-times"></i>
+        <img src="./img/products/${item.tag}.jpg">
+        <span>${item.name}</span>
+      </div>
+      <div class="price">$${item.price}.00</div>
+      <div class="quantity">
+        <i class="fas fa-chevron-left"></i>
+        <span>${item.inCart}</span>
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="total">
+        $${item.inCart * item.price}.00
+        
+      `;
+    });
+    productContainer.innerHTML += `
+    <div class="basketTotalContainer">
+      <h4 class="basketTotalTitle">
+        Basket Total
+      </h4>
+        <h4 class="basketTotal">
+          $${cartCost}.00
+        </h4>
+    </div>
+  
+        `;
+  }
+}
+
+displayCart();
 onLoadCartNumbers();
