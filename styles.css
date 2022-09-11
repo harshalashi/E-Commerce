@@ -347,8 +347,17 @@ body {
   color: #00ffee;
 }
 
+#banner .normal a {
+  color: #000;
+  text-decoration: none;
+}
+
 #banner button:hover {
   background: #088178;
+  color: white;
+}
+
+#banner button:hover a {
   color: white;
 }
 
@@ -395,10 +404,20 @@ body {
   padding-bottom: 15px;
 }
 
+#sm-banner .banner-box a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+
 /* Hover Effect */
 #sm-banner .banner-box:hover button {
   background: #cce7d0;
   border: 1px solid #cce7d0;
+  color: #000;
+}
+
+#sm-banner .banner-box:hover button a {
   color: #000;
 }
 
