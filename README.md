@@ -1,4 +1,4 @@
-Clothing E-Commerce Website
+# Clothing E-Commerce Website
 
 This is a responsive e-commerce website for a clothing store built using HTML, CSS, and JavaScript. The website includes a homepage, shop page for displaying products, blog for sharing articles about fashion and style, about page for information about the company, and contact page for getting in touch.
 
